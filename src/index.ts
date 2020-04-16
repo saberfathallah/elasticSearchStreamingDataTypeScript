@@ -2,14 +2,16 @@ import dotenv from 'dotenv';
 import express from 'express';
 import bodyParser from 'body-parser';
 
+import insertProductsToEs from './handlers/products/insertProductsToEs';
+
 dotenv.config();
+
+const port = process.env.PORT || 4003;
 const app = express();
 
 app.use(bodyParser.json());
 
 
-app.get('/export', async (req, res) => {
-  res.json({ saber: 'saber' });
-});
+app.post('/export', insertProductsToEs);
 
-app.listen(4007, () => console.log('server running... 4007'));
+app.listen(port, () => console.log(`server running... ${port}`));
