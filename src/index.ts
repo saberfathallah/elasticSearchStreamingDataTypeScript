@@ -12,4 +12,4 @@ app.get('/export', async (req, res) => {
   res.json({ saber: 'saber' });
 });
 
-app.listen(4007, () => console.log('server running... '));
+app.listen(4007, () => console.log('server running... 4007'));
