@@ -10,6 +10,7 @@ const createTemplate = async (template, res): Promise<any> => {
       body: JSON.stringify(template),
     });
     const responseJson = await response.json();
+
     return responseJson;
   } catch (error) {
     return res.json({ error });

@@ -1,0 +1,3 @@
+const PRODUCTS_PER_BATCH = 10;
+
+export default PRODUCTS_PER_BATCH;

@@ -9,8 +9,10 @@ const insertDataToEs = async (data, index, res): Promise<any> => {
       item,
     ]),
   );
+
   try {
     const response = await esClient.bulk({ body: bulk });
+
     return response;
   } catch (error) {
     return res.json({ error });
